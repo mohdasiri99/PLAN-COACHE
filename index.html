@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة مشروع الكوتشينج التعليمي - إدارة تعليم عسير</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #006C35; /* Saudi Green */
+            --primary-dark: #004d26;
+            --accent: #Cda434; /* Gold */
+            --light-bg: #F9FAFB;
+            --white: #ffffff;
+            --text-dark: #1F2937;
+            --text-gray: #4B5563;
+            --border-color: #E5E7EB;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-print-color-adjust: exact;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: var(--white);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            min-height: 100vh;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding-bottom: 40px;
+            border-bottom: 3px solid var(--accent);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        h1 {
+            font-family: 'Tajawal', sans-serif;
+            font-size: 3rem;
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .meta-info {
+            display: inline-block;
+            background: #f0fdf4;
+            color: var(--primary-dark);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: 1px solid #bbf7d0;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .section-title h2 {
+            font-family: 'Tajawal', sans-serif;
+            font-size: 2rem;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .section-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        /* Info Cards (Summary) */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .info-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--primary);
+        }
+
+        .info-card h3 {
+            color: var(--text-gray);
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            color: var(--primary);
+            font-size: 1.4rem;
+            font-weight: 700;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .info-card i {
+            font-size: 2rem;
+            color: #e5e7eb;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            opacity: 0.5;
+        }
+
+        /* Timeline (Phases) */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 30px; /* RTL Line */
+            width: 4px;
+            background: #e5e7eb;
+            border-radius: 2px;
+        }
+
+        .phase-item {
+            position: relative;
+            margin-bottom: 50px;
+            padding-right: 80px;
+        }
+
+        .phase-dot {
+            position: absolute;
+            right: 11px;
+            top: 0;
+            width: 42px;
+            height: 42px;
+            background: var(--white);
+            border: 4px solid var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--text-dark);
+            z-index: 2;
+            box-shadow: 0 0 0 5px var(--white);
+        }
+
+        .phase-content {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-right: 5px solid var(--primary);
+        }
+
+        .phase-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #f3f4f6;
+            padding-bottom: 10px;
+        }
+
+        .phase-title h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .phase-date {
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .phase-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .phase-list li {
+            position: relative;
+            padding-right: 20px;
+            margin-bottom: 8px;
+            color: var(--text-gray);
+        }
+
+        .phase-list li::before {
+            content: '•';
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            right: 0;
+        }
+
+        /* Jim Knight Cycle */
+        .cycle-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .cycle-step {
+            flex: 1;
+            min-width: 250px;
+            background: var(--primary);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .cycle-step:nth-child(2) { background: var(--accent); }
+        .cycle-step:nth-child(3) { background: var(--text-dark); }
+
+        .cycle-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .cycle-step h4 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .cycle-step p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* KPIs Table */
+        .kpi-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .kpi-table th {
+            background: var(--primary);
+            color: var(--white);
+            padding: 15px;
+            text-align: right;
+            font-weight: 600;
+        }
+
+        .kpi-table td {
+            padding: 15px;
+            border-bottom: 1px solid #f3f4f6;
+            color: var(--text-gray);
+        }
+
+        .kpi-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .badge-green { background: #dcfce7; color: #166534; }
+
+        /* Standards Grid */
+        .standards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .standard-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border-top: 4px solid var(--primary);
+            transition: transform 0.2s;
+        }
+
+        .standard-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .standard-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .standard-icon {
+            width: 40px;
+            height: 40px;
+            background: #f0fdf4;
+            color: var(--primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .standard-title {
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+        }
+
+        .indicator-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .indicator-list li {
+            position: relative;
+            padding-right: 25px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        .indicator-list li::before {
+            content: '\f00c'; /* FontAwesome check */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            top: 3px;
+            color: var(--accent);
+            font-size: 0.8rem;
+        }
+
+        /* Governance & Risk Styles */
+        .governance-wrapper {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .gov-box {
+            flex: 1;
+            min-width: 300px;
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+        }
+        .gov-title {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .risk-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        .risk-table th { background: #f3f4f6; padding: 10px; text-align: right; }
+        .risk-table td { border-bottom: 1px solid #eee; padding: 10px; }
+        .risk-high { color: #dc2626; font-weight: bold; background: #fef2f2; padding: 2px 8px; border-radius: 4px; }
+        .risk-med { color: #d97706; font-weight: bold; background: #fffbeb; padding: 2px 8px; border-radius: 4px; }
+
+        /* Digital & Scaling Styles */
+        .digital-flow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--text-dark);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 20px;
+            position: relative;
+        }
+        .flow-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .flow-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+        .flow-text { font-size: 0.9rem; opacity: 0.9; }
+        .flow-line {
+            position: absolute;
+            top: 60px;
+            left: 50px;
+            right: 50px;
+            height: 2px;
+            background: rgba(255,255,255,0.2);
+            z-index: 1;
+            border-top: 2px dashed rgba(255,255,255,0.3);
+        }
+
+        .scale-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        .scale-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .scale-year {
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        /* Community & National Impact Styles */
+        .community-section {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 15px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .impact-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            color: var(--primary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+        }
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .partner-box {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .partner-box:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .partner-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        .partner-title {
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+        .partner-desc { font-size: 0.9rem; color: #666; }
+
+        /* Ministry Partners Grid */
+        .gov-partners-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .gov-partner-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            transition: all 0.3s;
+        }
+        .gov-partner-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 5px 15px rgba(0,108,53,0.1);
+        }
+        .gov-icon-box {
+            width: 50px;
+            height: 50px;
+            background: var(--light-bg);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 60px;
+            border-top: 2px solid #f3f4f6;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .author-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-img {
+            width: 60px;
+            height: 60px;
+            background: #e5e7eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--text-gray);
+        }
+
+        .author-text h4 {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .author-text p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* Print Specifics */
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; padding: 0; max-width: 100%; }
+            .cycle-step { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .phase-dot { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .section-icon { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .standard-card { break-inside: avoid; }
+            .gov-box { break-inside: avoid; }
+            .digital-flow { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .community-section { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .gov-partner-card { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="header-top">
+            <span>المملكة العربية السعودية - وزارة التعليم</span>
+            <span>الإدارة العامة للتعليم بمنطقة عسير</span>
+        </div>
+        <h1>مشروع الكوتشينج التعليمي</h1>
+        <div class="subtitle">نحو تحسين التدريس وتمكين المدرسة</div>
+        <div class="meta-info">
+            <i class="fa-regular fa-calendar-check"></i> الخطة التنفيذية: فبراير - ديسمبر 2026
+        </div>
+    </header>
+
+    <!-- Project Summary Cards -->
+    <section>
+        <div class="section-title">
+            <div class="section-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <h2>ملخص المشروع بالأرقام</h2>
+        </div>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>النطاق المستهدف</h3>
+                <p>50 مدرسة</p>
+                <i class="fa-solid fa-school"></i>
+            </div>
+            <div class="info-card">
+                <h3>الفترة الزمنية</h3>
+                <p>11 شهراً</p>
+                <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="info-card">
+                <h3>المرجعية العلمية</h3>
+                <p>Jim Knight & ICF</p>
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div class="info-card">
+                <h3>الارتباط الاستراتيجي</h3>
+                <p>رؤية 2030</p>
+                <i class="fa-solid fa-eye"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community & National Impact -->
+    <section>
+        <div class="section-title">
+            <div class="section-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+            <h2>البعد الوطني والشراكة المجتمعية (National Impact)</h2>
+        </div>
+        
+        <div class="community-section">
+            <div style="text-align: center;">
+                <div class="impact-pill">
+                    <i class="fa-solid fa-earth-asia"></i>
+                    <span>مشروع وطني لتحقيق مستهدفات "برنامج تنمية القدرات البشرية"</span>
+                </div>
+                <p style="color: #4b5563; max-width: 800px; margin: 0 auto 30px auto;">
+                    لا يقتصر المشروع على أسوار المدرسة، بل يهدف لنقل ثقافة "الكوتشينج" (الحوار، الإنصات، التغذية الراجعة) لتصبح لغة مشتركة بين المدرسة والمنزل والمجتمع.
+                </p>
+            </div>
+
+            <!-- Community Partners -->
+            <div class="partners-grid">
+                <div class="partner-box">
+                    <div class="partner-icon"><i class="fa-solid fa-user-pen"></i></div>
+                    <div class="partner-title">صوت الطالب (Student Voice)</div>
+                    <div class="partner-desc">
+                        تحويل الطالب من متلقٍ إلى "شريك مقيّم". إشراك الطلاب في مجموعات تركيز لإبداء الرأي في طرق التدريس.
+                    </div>
+                </div>
+                <div class="partner-box">
+                    <div class="partner-icon"><i class="fa-solid fa-house-chimney-user"></i></div>
+                    <div class="partner-title">الكوتشينج الأسري</div>
+                    <div class="partner-desc">
+                        ورش عمل للآباء بعنوان "كن كوتش لابنك"، لتعليمهم مهارات طرح الأسئلة المحفزة بدلاً من التلقين.
+                    </div>
+                </div>
+                <div class="partner-box">
+                    <div class="partner-icon"><i class="fa-solid fa-people-group"></i></div>
+                    <div class="partner-title">الشراكة المجتمعية</div>
+                    <div class="partner-desc">
+                        استقطاب كوتشز متطوعين من القطاع الخاص لنقل خبرات القيادة والإدارة للمعلمين.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ministry Integration -->
+            <h3 style="margin-top: 30px; margin-bottom: 20px; color: var(--primary); text-align: center;">التكامل الحكومي والشراكات الاستراتيجية</h3>
+            <div class="gov-partners-grid">
+                <!-- Ministry of Media -->
+                <div class="gov-partner-card">
+                    <div class="gov-icon-box"><i class="fa-solid fa-bullhorn"></i></div>
+                    <div>
+                        <div class="partner-title">وزارة الإعلام (الشريك الإعلامي)</div>
+                        <div class="partner-desc">
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--accent); margin-left: 5px;"></i> إطلاق حملة "المعلم الكوتش" لتحسين الصورة الذهنية.</li>
+                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-left: 5px;"></i> توثيق "قصص النجاح" وبثها عبر المنصات الوطنية.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ministry of HR -->
+                <div class="gov-partner-card">
+                    <div class="gov-icon-box"><i class="fa-solid fa-briefcase"></i></div>
+                    <div>
+                        <div class="partner-title">وزارة الموارد البشرية (الشريك التنظيمي)</div>
+                        <div class="partner-desc">
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--accent); margin-left: 5px;"></i> ربط المشروع بـ "منصة العمل التطوعي" لاستقطاب الخبراء المتقاعدين.</li>
+                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-left: 5px;"></i> اعتماد ساعات الكوتشينج ضمن سجل التطوير المهني.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phases Timeline -->
+    <section>
+        <div class="section-title">
+            <div class="section-icon"><i class="fa-solid fa-road"></i></div>
+            <h2>خارطة الطريق والمراحل التنفيذية</h2>
+        </div>
+        
+        <div class="timeline">
+            <!-- Phase 1 -->
+            <div class="phase-item">
+                <div class="phase-dot">1</div>
+                <div class="phase-content">
+                    <div class="phase-header">
+                        <div class="phase-title">
+                            <h3>المرحلة الأولى: الإعداد والتهيئة</h3>
+                            <span style="font-size: 0.9rem; color: #666;">بناء البنية التحتية واختيار الكفاءات</span>
+                        </div>
+                        <div class="phase-date">فبراير - أبريل 2026</div>
+                    </div>
+                    <strong>الإجراءات الرئيسية:</strong>
+                    <ul class="phase-list">
+                        <li>اختيار 50 مدرسة بناءً على التنوع الجغرافي والاستعداد القيادي.</li>
+                        <li>ترشيح الكوتشز وفق معايير (الخبرة 10+ سنوات، السمعة المهنية، القبول الاجتماعي).</li>
+                        <li>عقد اللقاءات التعريفية لقادة المدارس لضمان الدعم الإداري.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="phase-item">
+                <div class="phase-dot">2</div>
+                <div class="phase-content">
+                    <div class="phase-header">
+                        <div class="phase-title">
+                            <h3>المرحلة الثانية: التمكين والتدريب</h3>
+                            <span style="font-size: 0.9rem; color: #666;">بناء جدارات الكوتشينج المتقدمة</span>
+                        </div>
+                        <div class="phase-date">مايو - أغسطس 2026</div>
+                    </div>
+                    <strong>المنهجية التدريبية (60 ساعة):</strong>
+                    <ul class="phase-list">
+                        <li>جدارات ICF: الاستماع النشط، إثارة الوعي، بناء الثقة.</li>
+                        <li>منهجية Jim Knight: إدارة دورة التأثير، استخدام الفيديو، الشراكة.</li>
+                        <li>التطبيق العملي والمحاكاة قبل النزول للميدان.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="phase-item">
+                <div class="phase-dot">3</div>
+                <div class="phase-content">
+                    <div class="phase-header">
+                        <div class="phase-title">
+                            <h3>المرحلة الثالثة: التطبيق الميداني</h3>
+                            <span style="font-size: 0.9rem; color: #666;">تفعيل دورات الكوتشينج وقياس الأثر</span>
+                        </div>
+                        <div class="phase-date">سبتمبر - ديسمبر 2026</div>
+                    </div>
+                    <strong>دورة العمل اليومية:</strong>
+                    <div class="cycle-wrapper">
+                        <div class="cycle-step">
+                            <div class="cycle-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <h4>1. التحديد (Identify)</h4>
+                            <p>تصوير الدرس، تحليل الواقع، تحديد هدف دقيق للتحسين.</p>
+                        </div>
+                        <div class="cycle-step">
+                            <div class="cycle-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                            <h4>2. التعلم (Learn)</h4>
+                            <p>شرح الاستراتيجية ونمذجتها (Modeling) داخل الفصل.</p>
+                        </div>
+                        <div class="cycle-step">
+                            <div class="cycle-icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <h4>3. التحسين (Improve)</h4>
+                            <p>التطبيق، قياس الأثر، والتعديل حتى يتحقق الهدف.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Operations & Scaling -->
+    <section>
+        <div class="section-title">
+            <div class="section-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h2>التمكين الرقمي واستراتيجية التوسع</h2>
+        </div>
+        
+        <!-- Digital Flow -->
+        <h3 style="margin-bottom: 15px; color: var(--primary);">1. النموذج التشغيلي الرقمي (Digital Dashboard)</h3>
+        <p style="color: #666; margin-bottom: 15px;">ضمان تدفق البيانات لحظياً من الميدان إلى صناع القرار.</p>
+        <div class="digital-flow">
+            <div class="flow-line"></div>
+            <div class="flow-step">
+                <div class="flow-icon"><i class="fa-solid fa-school"></i></div>
+                <div class="flow-text"><strong>المدرسة</strong><br>تسجيل الجلسات</div>
+            </div>
+            <div class="flow-step">
+                <div class="flow-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                <div class="flow-text"><strong>المنصة</strong><br>رفع الشواهد والبيانات</div>
+            </div>
+            <div class="flow-step">
+                <div class="flow-icon"><i class="fa-solid fa-chart-simple"></i></div>
+                <div class="flow-text"><strong>لوحة المؤشرات</strong><br>تحليل الأثر والتقدم</div>
+            </div>
+            <div class="flow-step">
+                <div class="flow-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="flow-text"><strong>الإدارة العليا</strong><br>اتخاذ القرار</div>
+            </div>
+        </div>
+
+        <!-- Scaling Strategy -->
+        <h3 style="margin-top: 30px; margin-bottom: 15px; color: var(--primary);">2. خارطة التوسع المستقبلي (Scaling Strategy)</h3>
+        <div class="scale-grid">
+            <div class="scale-card">
+                <div class="scale-year">2026</div>
+                <div style="font-weight: bold; margin-bottom: 5px;">مرحلة "النموذج"</div>
+                <p style="font-size: 0.9rem; color: #666;">50 مدرسة (التجربة والتحسين)</p>
+            </div>
+            <div class="scale-card" style="background: #f0fdf4; border-color: #bbf7d0;">
+                <div class="scale-year">2027</div>
+                <div style="font-weight: bold; margin-bottom: 5px;">مرحلة "النمو"</div>
+                <p style="font-size: 0.9rem; color: #666;">200 مدرسة (نقل الخبرة)</p>
+            </div>
+            <div class="scale-card">
+                <div class="scale-year">2028+</div>
+                <div style="font-weight: bold; margin-bottom: 5px;">مرحلة "الاستدامة"</div>
+                <p style="font-size: 0.9rem; color: #666;">تغطية المنطقة (مأسسة العمل)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Standards & Indicators -->
+    <section>
+        <div class="section-title">
+            <div class="section-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+            <h2>مصفوفة المعايير والمؤشرات (5 معايير / 19 مؤشراً)</h2>
+        </div>
+        <div class="standards-grid">
+            <!-- Standard 1 -->
+            <div class="standard-card">
+                <div class="standard-header">
+                    <div class="standard-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <div class="standard-title">المعيار الأول: البنية التحتية والدعم القيادي</div>
+                </div>
+                <ul class="indicator-list">
+                    <li>توفر مساحة مكانية مناسبة وآمنة لجلسات الكوتشينج.</li>
+                    <li>إعلان القائد المدرسي تبني المشروع ودعم قرارات الكوتش.</li>
+                    <li>تخصيص وقت محدد ضمن الجدول المدرسي (تفريغ جزئي) للكوتش.</li>
+                </ul>
+            </div>
+
+            <!-- Standard 2 -->
+            <div class="standard-card">
+                <div class="standard-header">
+                    <div class="standard-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                    <div class="standard-title">المعيار الثاني: جدارات الكوتش التعليمي</div>
+                </div>
+                <ul class="indicator-list">
+                    <li>إتقان جدارات ICF الأساسية (الاستماع النشط، الأسئلة القوية).</li>
+                    <li>القدرة على "نمذجة" استراتيجيات التدريس داخل الفصل.</li>
+                    <li>الالتزام التام بميثاق أخلاقيات المهنة (السرية وعدم الحكم).</li>
+                    <li>سجل التطور المهني المستمر (ساعات تدريبية موثقة).</li>
+                </ul>
+            </div>
+
+            <!-- Standard 3 -->
+            <div class="standard-card">
+                <div class="standard-header">
+                    <div class="standard-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+                    <div class="standard-title">المعيار الثالث: منهجية دورة التأثير</div>
+                </div>
+                <ul class="indicator-list">
+                    <li>استخدام الفيديو أو الملاحظة الدقيقة لتشخيص الواقع (Identify).</li>
+                    <li>صياغة أهداف PEERS (دقيقة، سهلة، عاطفية، قابلة للوصول).</li>
+                    <li>إعداد أدلة تعلم (Checklists) واضحة للاستراتيجية المختارة.</li>
+                    <li>تنفيذ النمذجة (Modeling) للمعلم قبل التطبيق.</li>
+                    <li>متابعة التحسين وقياس التقدم حتى تحقق الهدف.</li>
+                </ul>
+            </div>
+
+            <!-- Standard 4 -->
+            <div class="standard-card">
+                <div class="standard-header">
+                    <div class="standard-icon"><i class="fa-solid fa-file-contract"></i></div>
+                    <div class="standard-title">المعيار الرابع: التكامل مع إطار الوزارة</div>
+                </div>
+                <ul class="indicator-list">
+                    <li>استخدام "أداة ملاحظة التدريس" كأداة تشخيصية وليست تقييمية.</li>
+                    <li>تطبيق أداة "تحليل ثقافة التدريس" في المدرسة.</li>
+                    <li>ربط أهداف الكوتشينج بخارطة نواتج التعلم للمقرر.</li>
+                    <li>تفعيل وقيادة "مجتمعات التعلم المهنية" (PLC) المدرسية.</li>
+                </ul>
+            </div>
+
+            <!-- Standard 5 -->
+            <div class="standard-card">
+                <div class="standard-header">
+                    <div class="standard-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="standard-title">المعيار الخامس: الأثر والاستدامة</div>
+                </div>
+                <ul class="indicator-list">
+                    <li>نسبة تبني المعلمين للاستراتيجيات الجديدة (> 80%).</li>
+                    <li>تحسن قابل للقياس في نواتج تعلم الطلاب أو انخراطهم.</li>
+                    <li>ارتفاع مؤشر رضا المعلمين عن الدعم المقدم من الكوتش.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Governance & Enablers Section -->
+    <section>
+        <div class="section-title">
+            <div class="section-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h2>الحوكمة وممكنات النجاح (Governance & Enablers)</h2>
+        </div>
+        <div class="governance-wrapper">
+            <!-- Governance Structure -->
+            <div class="gov-box">
+                <div class="gov-title"><i class="fa-solid fa-sitemap"></i> الهيكل التنظيمي للمشروع</div>
+                <ul class="indicator-list">
+                    <li><strong>اللجنة التوجيهية:</strong> برئاسة مدير عام التعليم (اتخاذ القرارات الاستراتيجية والميزانية).</li>
+                    <li><strong>الفريق التنفيذي:</strong> وحدة الكوتشينج بالإدارة (الإشراف الفني والمتابعة).</li>
+                    <li><strong>فريق المدرسة:</strong> مدير المدرسة (القائد الإداري) + الكوتش (القائد الفني).</li>
+                </ul>
+            </div>
+
+            <!-- Incentives -->
+            <div class="gov-box">
+                <div class="gov-title"><i class="fa-solid fa-star"></i> منظومة الحوافز المقترحة</div>
+                <ul class="indicator-list">
+                    <li>احتساب ساعات الكوتشينج كساعات "تطوير مهني" معتمدة في نظام فارس.</li>
+                    <li>أولوية الترشيح للمناصب القيادية والإشرافية للكوتشز المتميزين.</li>
+                    <li>تخفيض النصاب التدريسي للكوتش بنسبة 30% للتفرغ لمهام الكوتشينج.</li>
+                </ul>
+            </div>
+
+            <!-- Risk Management -->
+            <div class="gov-box" style="flex-basis: 100%;">
+                <div class="gov-title"><i class="fa-solid fa-triangle-exclamation"></i> سجل المخاطر وإجراءات التخفيف</div>
+                <table class="risk-table">
+                    <tr>
+                        <th width="30%">الخطر المحتمل</th>
+                        <th width="15%">المستوى</th>
+                        <th>إجراء التخفيف (Mitigation)</th>
+                    </tr>
+                    <tr>
+                        <td>مقاومة المعلمين القدامى للتغيير</td>
+                        <td><span class="risk-high">عالٍ</span></td>
+                        <td>البدء بالمعلمين المتطوعين (Early Adopters) + التأكيد على سرية الجلسات وعدم ارتباطها بالتقييم.</td>
+                    </tr>
+                    <tr>
+                        <td>زيادة العبء على الكوتش (الاحتراق الوظيفي)</td>
+                        <td><span class="risk-med">متوسط</span></td>
+                        <td>إصدار قرار إداري ملزم بتخفيض النصاب + دعم نفسي دوري للكوتشز.</td>
+                    </tr>
+                    <tr>
+                        <td>عدم تعاون مدير المدرسة</td>
+                        <td><span class="risk-med">متوسط</span></td>
+                        <td>ربط نجاح المشروع بمؤشرات الأداء المدرسي الخاصة بالمدير.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- KPIs Summary -->
+    <section>
+        <div class="section-title">
+            <div class="section-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h2>ملخص المستهدفات الرقمية</h2>
+        </div>
+        <table class="kpi-table">
+            <thead>
+                <tr>
+                    <th>المجال</th>
+                    <th>المؤشر</th>
+                    <th>القيمة المستهدفة</th>
+                    <th>وسيلة التحقق</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>الكفاءة البشرية</strong></td>
+                    <td>اجتياز الكوتشز لاختبار الجدارات المعرفية</td>
+                    <td><span class="badge badge-green">85% فأعلى</span></td>
+                    <td>اختبارات قبلية/بعدية</td>
+                </tr>
+                <tr>
+                    <td><strong>العمليات</strong></td>
+                    <td>عدد دورات الكوتشينج المكتملة في المدارس</td>
+                    <td><span class="badge badge-green">150+ دورة</span></td>
+                    <td>سجلات الكوتشينج</td>
+                </tr>
+                <tr>
+                    <td><strong>الأثر التعليمي</strong></td>
+                    <td>نسبة تطبيق استراتيجيات التدريس الحديثة</td>
+                    <td><span class="badge badge-green">80%</span></td>
+                    <td>بطاقة ملاحظة التدريس</td>
+                </tr>
+                <tr>
+                    <td><strong>رضا المستفيد</strong></td>
+                    <td>رضا المعلمين عن تجربة الكوتشينج</td>
+                    <td><span class="badge badge-green">90%</span></td>
+                    <td>استبيانات إلكترونية</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="author-info">
+            <div class="author-img"><i class="fa-solid fa-user-tie"></i></div>
+            <div class="author-text">
+                <h4>فكرة وتقديم / محمد علي عبدالله عسيري</h4>
+                <p>كوتش محترف معتمد PCC بمعايير ICF الدولية</p>
+            </div>
+        </div>
+        <div class="date-info" style="color: #666; font-weight: 600;">
+            أكتوبر 2025 م
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
